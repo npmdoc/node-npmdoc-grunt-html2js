@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"grunt-html2js",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "grunt-html2js",
+    "description": "api documentation for [grunt-html2js (v0.3.8)](https://github.com/rquadling/grunt-html2js) [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-html2js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-html2js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-html2js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-html2js)",
     "devDependencies": {
-        "grunt-html2js": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "grunt-html2js": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-grunt-html2js",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-grunt-html2js",
+    "keywords": [
+        "documentation",
+        "grunt-html2js"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_grunt_html2js.js",
+    "name": "npmdoc-grunt-html2js",
+    "nameAlias": "npmdoc_grunt_html2js",
+    "nameOriginal": "npmdoc-grunt-html2js",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-grunt-html2js"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
