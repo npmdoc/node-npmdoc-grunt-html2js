@@ -1,9 +1,14 @@
-# api documentation for  [grunt-html2js (v0.3.8)](https://github.com/rquadling/grunt-html2js)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-html2js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-html2js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-html2js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-html2js)
+# npmdoc-grunt-html2js
+
+#### api documentation for  [grunt-html2js (v0.3.8)](https://github.com/rquadling/grunt-html2js)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-html2js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-html2js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-html2js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-html2js)
+
 #### Compiles AngularJS templates to JavaScript
 
-[![NPM](https://nodei.co/npm/grunt-html2js.png?downloads=true)](https://www.npmjs.com/package/grunt-html2js)
+[![NPM](https://nodei.co/npm/grunt-html2js.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/grunt-html2js)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-html2js/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-grunt-html2js_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-html2js/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-grunt-html2js/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-grunt-html2js/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-html2js/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-html2js/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-grunt-html2js/build/screenCapture.npmPackageListing.svg)
 
@@ -17,16 +22,14 @@
 
 {
     "author": {
-        "name": "Karl Goldstein",
-        "email": "karl.goldstein@gmail.com"
+        "name": "Karl Goldstein"
     },
     "bugs": {
         "url": "https://github.com/rquadling/grunt-html2js/issues"
     },
     "contributors": [
         {
-            "name": "Richard Quadling",
-            "email": "RQuadling@GMail.com"
+            "name": "Richard Quadling"
         }
     ],
     "dependencies": {
@@ -65,8 +68,7 @@
     "main": "Gruntfile.js",
     "maintainers": [
         {
-            "name": "rquadling",
-            "email": "RQuadling@GMail.com"
+            "name": "rquadling"
         }
     ],
     "name": "grunt-html2js",
@@ -76,7 +78,6 @@
     "peerDependencies": {
         "grunt": ">=0.4.0"
     },
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/rquadling/grunt-html2js.git"
@@ -87,16 +88,6 @@
     "version": "0.3.8"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module grunt-html2js](#apidoc.module.grunt-html2js)
-
-
-
-# <a name="apidoc.module.grunt-html2js"></a>[module grunt-html2js](#apidoc.module.grunt-html2js)
 
 
 
