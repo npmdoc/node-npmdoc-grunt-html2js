@@ -61,12 +61,189 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.grunt-html2js">module grunt-html2js</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-html2js.grunt-html2js">
+            function <span class="apidocSignatureSpan"></span>grunt-html2js
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.grunt-html2js" id="apidoc.module.grunt-html2js">module grunt-html2js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-html2js.grunt-html2js" id="apidoc.element.grunt-html2js.grunt-html2js">
+        function <span class="apidocSignatureSpan"></span>grunt-html2js
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grunt-html2js = function (grunt) {
+
+  // Project configuration.
+  grunt.initConfig({
+    jshint: {
+      options: {
+        jshintrc: &#x27;.jshintrc&#x27;,
+      },
+      all: [
+        &#x27;Gruntfile.js&#x27;,
+        &#x27;tasks<span class="apidocCodeCommentSpan">/*.js&#x27;,
+        &#x27;&#x3c;%= nodeunit.tests %&#x3e;&#x27;,
+      ]
+    },
+
+    // Before generating any new files, remove any previously-created files.
+    clean: {
+      tests: [&#x27;tmp&#x27;],
+    },
+
+    // Configuration to be run (and then tested).
+    // See https://github.com/gruntjs/grunt/wiki/Configuring-tasks
+    // for configuration options that need to be tested
+    html2js: {
+
+      regex_in_template: {
+        src: [&#x27;test/fixtures/pattern.tpl.html&#x27;],
+        dest: &#x27;tmp/regex_in_template.js&#x27;
+      },
+
+      compact_format_default_options: {
+        src: [&#x27;test/fixtures/one.tpl.html&#x27;, &#x27;test/fixtures/two.tpl.html&#x27;],
+        dest: &#x27;tmp/compact_format_default_options.js&#x27;
+      },
+
+      broken_newlines: {
+        src: [&#x27;test/fixtures/broken_newlines.tpl.html&#x27;],
+        dest: &#x27;tmp/broken_newlines.js&#x27;
+      },
+
+      empty_attribute: {
+        src: [&#x27;test/fixtures/empty_attribute.tpl.html&#x27;],
+        dest: &#x27;tmp/empty_attribute.js&#x27;
+      },
+
+      custom_attribute_collapsed: {
+        src: [&#x27;test/fixtures/custom_attribute_collapse.tpl.html&#x27;],
+        dest: &#x27;tmp/custom_attribute_collapsed.js&#x27;,
+        options: {
+          htmlmin: {
+            customAttrCollapse: /my-[a-z]*/
+</span>          }
+        }
+      },
+
+      custom_attribute_not_collapsed: {
+        src: [&#x27;test/fixtures/custom_attribute_collapse.tpl.html&#x27;],
+        dest: &#x27;tmp/custom_attribute_not_collapsed.js&#x27;
+      },
+
+      files_object_default_options: {
+        files: {
+          &#x27;tmp/files_object_default_options_1.js&#x27;: [&#x27;test/fixtures/one.tpl.html&#x27;],
+          &#x27;tmp/files_object_default_options_2.js&#x27;: [&#x27;test/fixtures/two.tpl.html&#x27;]
+        }
+      },
+
+      files_array_default_options: {
+        files: [
+          {
+            dest: &#x27;tmp/files_array_default_options_1.js&#x27;,
+            src: [&#x27;test/fixtures/one.tpl.html&#x27;]
+          },
+          {
+            dest: &#x27;tmp/files_array_default_options_2.js&#x27;,
+            src: [&#x27;test/fixtures/two.tpl.html&#x27;]
+          }
+        ]
+      },
+
+      compact_format_custom_options: {
+        options: {
+          base: &#x27;test&#x27;,
+          module: &#x27;my-custom-template-module&#x27;
+        },
+        src: [&#x27;test/fixtures/one.tpl.html&#x27;, &#x27;test/fixtures/two.tpl.html&#x27;],
+        dest: &#x27;tmp/compact_format_custom_options.js&#x27;
+      },
+
+      files_object_custom_options: {
+        options: {
+          base: &#x27;test&#x27;,
+          module: &#x27;my-custom-template-module&#x27;
+        },
+        files: {
+          &#x27;tmp/files_object_custom_options_1.js&#x27;: [&#x27;test/fixtures/one.tpl.html&#x27;],
+          &#x27;tmp/files_object_custom_options_2.js&#x27;: [&#x27;test/fixtures/two.tpl.html&#x27;]
+        }
+      },
+
+      files_array_custom_options: {
+        options: {
+          base: &#x27;test&#x27;,
+          module: &#x27;my-custom-template-module&#x27;
+        },
+        files: [
+          {
+            dest: &#x27;tmp/files_array_custom_options_1.js&#x27;,
+            src: [&#x27;test/fixtures/one.tpl.html&#x27;],
+            module: &#x27;my-custom-templates&#x27;
+          },
+          {
+            dest: &#x27;tmp/files_array_custom_options_2.js&#x27;,
+            src: [&#x27;test/fixtures/two.tpl.html&#x27;],
+            module: &#x27;my-custom-templates&#x27;
+          }
+        ]
+      },
+
+      multi_lines: {
+        src: [&#x27;test/fixtures/three.tpl.html&#x27;],
+        dest: &#x27;tmp/multi_lines.js&#x27;
+      },
+
+      double_quotes: {
+        src: [&#x27;test/fixtures/four.tpl.html&#x27;],
+        dest: &#x27;tmp/double_quotes.js&#x27;
+      },
+
+      single_quotes: {
+        options: {
+          quoteChar: &#x27;\&#x27;&#x27;
+        },
+        src: [&#x27;test/fixtures/four.tpl.html&#x27;],
+        dest: &#x27;tmp/single_quotes.js&#x27;
+      },
+
+      multi_lines_tabs: {
+        options: {
+          indentString: &#x27;\t&#x27;
+        },
+        src: [&#x27;test/fixtures/three.tpl.html&#x27;],
+        dest: &#x27;tmp/multi_lines_tabs.js&#x27;
+      },
+
+      multi_lines_4space: {
+        options: {
+          indentString: &#x27;    &#x27;
+        },
+        src: [&#x27;test/fixtures/three.tpl.html&#x27;],
+        dest: &#x27;tmp/multi_lines_4spaces.js&#x27;
+      },
+
+      file_header: {
+        options: {
+          f ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
