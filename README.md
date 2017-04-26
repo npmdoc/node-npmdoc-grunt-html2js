@@ -1,6 +1,6 @@
 # npmdoc-grunt-html2js
 
-#### api documentation for  [grunt-html2js (v0.3.8)](https://github.com/rquadling/grunt-html2js)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-html2js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-html2js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-html2js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-html2js)
+#### basic api documentation for  [grunt-html2js (v0.3.8)](https://github.com/rquadling/grunt-html2js)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-html2js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-html2js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-html2js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-html2js)
 
 #### Compiles AngularJS templates to JavaScript
 
@@ -85,7 +85,8 @@
     "scripts": {
         "test": "grunt test"
     },
-    "version": "0.3.8"
+    "version": "0.3.8",
+    "bin": {}
 }
 ```
 
